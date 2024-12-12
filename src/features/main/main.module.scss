@@ -1,0 +1,38 @@
+@use "/src/shared/styles/colors";
+
+.main {
+  background-color: colors.$blue-100;
+  padding: 25px 1rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+.search {
+  margin-bottom: 25px;
+}
+
+.filesSubtitle,
+.projectsSubtitle {
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+// .projectsSubtitle {
+//   margin-bottom: 23px;
+// }
+// .filesSubtitle {
+//   margin-bottom: 14px;
+// }
+
+.recentProjects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(159px, 1fr));
+  gap: 14px;
+}
+.recentFiles {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,19 @@
+@use "/src/shared/styles/colors";
+
+.container {
+  display: grid;
+  grid-template-columns: min-content 1fr 1fr 1fr min-content;
+  column-gap: 12px;
+  row-gap: 1rem;
+}
+
+.name {
+  grid-column: span 2;
+}
+.name,
+.members,
+.lastModified {
+  font-size: 12px;
+  color: colors.$gray-200;
+  margin-bottom: 2px;
+}

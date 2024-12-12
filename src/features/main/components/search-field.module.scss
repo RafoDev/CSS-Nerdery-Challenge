@@ -1,0 +1,37 @@
+@use "/src/shared/styles/colors";
+
+.field {
+  height: 29px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: colors.$gray-100;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 7px;
+  padding: 12px 7px;
+}
+.icon {
+  width: 15px;
+  height: 15px;
+}
+.input {
+  box-sizing: border-box;
+  color: colors.$gray-100;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin-top: 1px;
+  font-size: 10px;
+}
+.input::placeholder {
+  font-size: 10px;
+
+  color: colors.$gray-100;
+}
+
+.input:focus {
+  outline: none;
+}

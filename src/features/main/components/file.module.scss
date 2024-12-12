@@ -1,0 +1,47 @@
+@use "/src/shared/styles/colors";
+
+.container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 5;
+  align-items: center;
+  padding: 10px 13px;
+  font-size: 12px;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 42px;
+}
+
+.type {
+  width: 21px;
+  height: 21px;
+  background-color: colors.$gray-50;
+  border-radius: 5px;
+}
+.design {
+  background-color: colors.$orange-300;
+}
+.gallery {
+  background-color: colors.$green;
+}
+.document {
+  background-color: colors.$red-100;
+}
+.other {
+  background-color: colors.$orange-300;
+}
+.more {
+  color: colors.$gray-50;
+  height: 15px;
+}
+.name {
+}
+.members {
+}
+.lastModified,
+.members {
+  color: colors.$gray-200;
+}
+.lastModified {
+}
