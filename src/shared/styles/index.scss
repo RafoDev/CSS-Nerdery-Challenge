@@ -1,0 +1,16 @@
+@use "./fonts";
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: fonts.$roboto;
+  margin: 0;
+}
+
+#root {
+}

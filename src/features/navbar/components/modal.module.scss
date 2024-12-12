@@ -1,0 +1,50 @@
+@use "/src/shared/styles/colors";
+
+.container {
+  box-sizing: border-box;
+  background-color: colors.$gray-300;
+  padding: 19px 14px;
+  width: 116px;
+  height: 111px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: all 0.25s;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 16px;
+  width: 11px;
+  height: 10px;
+  background-color: colors.$gray-300;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.options {
+  list-style: none;
+  padding-left: 0;
+  color: colors.$gray-100;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.option {
+}
+.optionLabel {
+  margin: 0;
+  font-size: 10px;
+}
+.optionIcon {
+  width: 15px;
+  height: 15px;
+}
