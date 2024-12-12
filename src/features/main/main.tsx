@@ -1,11 +1,17 @@
 import styles from "./main.module.scss";
-import { Project } from "./components/project";
+import { Project } from "./components/project/project";
 import { File as FileType, Project as ProjectType } from "./types";
-import { SearchField } from "./components/search-field";
-import { FileList } from "./components/file-list";
+import { SearchField } from "./components/search-field/search-field";
+import { FileList } from "./components/file/file-list";
+import { Shared } from "./components/shared/shared";
+import { CardType } from "../../shared/ui/card";
 
 const recentProjects: ProjectType[] = [
-  { contributors: ["", ""], creationDate: "20.02.2020", name: "App Project" },
+  {
+    contributors: ["", "", ""],
+    creationDate: "20.02.2020",
+    name: "App Project",
+  },
   {
     contributors: ["", ""],
     creationDate: "28.02.2020",
@@ -13,6 +19,31 @@ const recentProjects: ProjectType[] = [
   },
   {
     contributors: ["", "", "", "", "", ""],
+    creationDate: "04.03.2020",
+    name: "Client Documents",
+  },
+];
+
+const sharedProjects: CardType[] = [
+  {
+    members: [{ name: "" }, { name: "" }, { name: "" }],
+    creationDate: "20.02.2020",
+    name: "App Project",
+  },
+  {
+    members: [{ name: "" }, { name: "" }],
+    creationDate: "28.02.2020",
+    name: "Project: fitbit",
+  },
+  {
+    members: [
+      { name: "" },
+      { name: "" },
+      { name: "" },
+      { name: "" },
+      { name: "" },
+      { name: "" },
+    ],
     creationDate: "04.03.2020",
     name: "Client Documents",
   },
@@ -54,7 +85,7 @@ export const Main = () => {
 
       <section className={styles.container}>
         <section>
-          <h2 className={styles.projectsSubtitle}>Recently Used</h2>
+          <h2 className={styles.subtitle}>Recently Used</h2>
           <div className={styles.recentProjects}>
             {recentProjects.map((project) => (
               <Project data={project} />
@@ -63,8 +94,18 @@ export const Main = () => {
         </section>
 
         <section>
-          <h2 className={styles.filesSubtitle}>Recent Files</h2>
+          <h2 className={styles.subtitle}>Recent Files</h2>
           <FileList files={recentFiles} />
+        </section>
+
+        <section>
+          <h2 className={styles.subtitle}>Shared with me</h2>
+
+          <div className={styles.sharedProjects}>
+            {sharedProjects.map((shared) => (
+              <Shared data={shared} />
+            ))}
+          </div>
         </section>
       </section>
     </main>

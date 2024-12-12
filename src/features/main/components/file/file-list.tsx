@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./file-list.module.scss";
-import { File as FileType } from "../types";
+import { File as FileType } from "../../types";
 import { File } from "./file";
 
 type FileListProps = {

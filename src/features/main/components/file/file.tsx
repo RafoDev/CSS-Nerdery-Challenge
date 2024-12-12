@@ -1,5 +1,5 @@
 import styles from "./file.module.scss";
-import { File as FileType } from "../types";
+import { File as FileType } from "../../types";
 import { RiMoreFill } from "@remixicon/react";
 
 type FileProps = {

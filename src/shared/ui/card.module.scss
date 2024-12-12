@@ -47,8 +47,9 @@
 }
 .more {
   color: colors.$gray-50;
-  width: auto;
-  height: 13px;
+  width: 20px;
+  transform: translate(8px, -2px);
+  height: 20px;
   justify-self: end;
 }
 .name {

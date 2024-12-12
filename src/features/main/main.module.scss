@@ -13,19 +13,11 @@
   margin-bottom: 25px;
 }
 
-.filesSubtitle,
-.projectsSubtitle {
+.subtitle {
   font-weight: 400;
   font-size: 20px;
   margin-top: 0;
 }
-
-// .projectsSubtitle {
-//   margin-bottom: 23px;
-// }
-// .filesSubtitle {
-//   margin-bottom: 14px;
-// }
 
 .recentProjects {
   display: grid;
@@ -35,4 +27,10 @@
 .recentFiles {
   display: flex;
   flex-direction: column;
+}
+
+.sharedProjects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(157px, 1fr));
+  gap: 10px;
 }

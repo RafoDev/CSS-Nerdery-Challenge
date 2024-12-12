@@ -1,5 +1,5 @@
 import { RiMore2Fill } from "@remixicon/react";
-import { Project as ProjectType } from "../types";
+import { Project as ProjectType } from "../../types";
 import styles from "./project.module.scss";
 
 type ProjectProps = {
