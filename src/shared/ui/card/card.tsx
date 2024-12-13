@@ -45,8 +45,8 @@ export const Card: React.FC<CardProps> = ({
     <article className={`${styles.container}`}>
       <div className={styles.folders}></div>
       <div className={styles.contributors}>
-        {processedMembers?.map((member) => (
-          <div className={styles.contributor} key={member.name}>
+        {processedMembers?.map((member, index) => (
+          <div className={styles.contributor} key={index}>
             <span className={styles.contributorLabel}>{member.name}</span>
           </div>
         ))}

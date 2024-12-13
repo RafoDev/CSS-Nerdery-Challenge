@@ -1,6 +1,6 @@
 import { RiMore2Fill } from "@remixicon/react";
-import { Project as ProjectType } from "../../types";
 import styles from "./project.module.scss";
+import { Project as ProjectType } from "../../../../shared/types/entities";
 
 type ProjectProps = {
   data: ProjectType;
@@ -25,8 +25,8 @@ export const Project: React.FC<ProjectProps> = ({ data }) => {
     <article className={styles.container}>
       <div className={styles.folders}></div>
       <div className={styles.contributors}>
-        {contributors?.map((contributor) => (
-          <div className={styles.contributor} key={contributor}>
+        {contributors?.map((contributor, index) => (
+          <div className={styles.contributor} key={index}>
             <span className={styles.contributorLabel}>{contributor}</span>
           </div>
         ))}

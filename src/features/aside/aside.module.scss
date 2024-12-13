@@ -2,5 +2,11 @@
 
 .container {
   box-sizing: border-box;
-  outline: 1px solid red;
+  background-color: colors.$blue-100;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
 }

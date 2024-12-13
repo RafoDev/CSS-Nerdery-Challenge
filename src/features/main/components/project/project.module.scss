@@ -6,21 +6,24 @@
   border-radius: 12px;
   background-color: #fff;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr min-content 1fr;
   height: 133px;
-  padding: 20px 1rem;
+  padding: 21px 14px;
+  padding-bottom: 19px;
   box-shadow: shadows.$shadow-1;
 }
 .folders {
-  justify-self: start;
   width: 30px;
   height: 25px;
   background-color: colors.$orange-300;
   box-shadow: -5px 5px colors.$orange-100;
+  margin-bottom: 1rem;
+  margin-left: 3px;
 }
 .contributors {
-  justify-self: center;
-  align-self: center;
+  padding-top: 10px;
+  justify-self: end;
+  align-self: start;
   display: flex;
 }
 .contributor {
@@ -48,7 +51,7 @@
 .more {
   color: colors.$gray-50;
   width: 20px;
-  transform: translate(8px, -2px);
+  transform: translate(9px, -8px);
   height: 20px;
   justify-self: end;
 }
@@ -57,17 +60,40 @@
   font-size: 12px;
   color: colors.$blue-300;
   font-weight: 400;
+  align-self: end;
 }
 .creationDate {
   margin: 0;
   font-size: 8px;
   color: colors.$gray-200;
-  letter-spacing: 0.5px;
-  // line-height: 1;
+  letter-spacing: 0.4px;
 }
 
 .name,
 .creationDate {
   grid-column: span 3;
   align-self: end;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 24px 1rem;
+  }
+  .folders {
+    width: 30px;
+    height: 25px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+  .creationDate {
+    font-size: 0.8rem;
+  }
+  .contributor {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
 }

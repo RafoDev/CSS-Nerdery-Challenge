@@ -1,4 +1,4 @@
-import { Card, CardType } from "../../../../shared/ui/card";
+import { Card, CardType } from "../../../../shared/ui/card/card";
 import styles from "./shared.module.scss";
 
 export const Shared: React.FC<{

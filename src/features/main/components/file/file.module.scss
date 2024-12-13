@@ -31,11 +31,14 @@
 .other {
   background-color: colors.$orange-300;
 }
-.more {
+.moreIcon {
   color: colors.$gray-50;
   height: 15px;
+  margin-top: -1px;
+  margin-right: -4px;
 }
 .name {
+  color: colors.$blue-300;
 }
 .members {
 }
@@ -44,4 +47,21 @@
   color: colors.$gray-200;
 }
 .lastModified {
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 1rem 13px;
+    font-size: 1rem;
+    height: auto;
+    gap: 0.5rem;
+  }
+  .name {
+    font-size: 1rem;
+  }
+  .moreIcon,
+  .members {
+    display: none;
+  }
 }

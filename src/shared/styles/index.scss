@@ -10,11 +10,26 @@
 body {
   font-family: fonts.$roboto;
   margin: 0;
-  min-height: 100vh;
+  min-height: auto;
+  position: relative;
+  overflow-x: hidden;
 }
 
 #root {
   display: grid;
-  grid-template-columns: 172px minmax(562px, 1fr) 252px;
+  grid-template-columns: 172px 562px 252px;
   gap: 22px;
+}
+
+@media (min-width: 1028px) {
+  #root {
+    grid-template-columns: 172px 1fr 252px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #root {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }

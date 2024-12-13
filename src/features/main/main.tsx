@@ -1,14 +1,18 @@
 import styles from "./main.module.scss";
 import { Project } from "./components/project/project";
-import { File as FileType, Project as ProjectType } from "./types";
 import { SearchField } from "./components/search-field/search-field";
 import { FileList } from "./components/file/file-list";
 import { Shared } from "./components/shared/shared";
-import { CardType } from "../../shared/ui/card";
+import { CardType } from "../../shared/ui/card/card";
+import { RiLayoutGridLine, RiLayoutRowLine } from "@remixicon/react";
+import {
+  File as FileType,
+  Project as ProjectType,
+} from "../../shared/types/entities";
 
 const recentProjects: ProjectType[] = [
   {
-    contributors: ["", "", ""],
+    contributors: ["", ""],
     creationDate: "20.02.2020",
     name: "App Project",
   },
@@ -28,12 +32,12 @@ const sharedProjects: CardType[] = [
   {
     members: [{ name: "" }, { name: "" }, { name: "" }],
     creationDate: "20.02.2020",
-    name: "App Project",
+    name: "Landing Page",
   },
   {
     members: [{ name: "" }, { name: "" }],
     creationDate: "28.02.2020",
-    name: "Project: fitbit",
+    name: "Illustration Pack",
   },
   {
     members: [
@@ -45,7 +49,7 @@ const sharedProjects: CardType[] = [
       { name: "" },
     ],
     creationDate: "04.03.2020",
-    name: "Client Documents",
+    name: "CV Design",
   },
 ];
 
@@ -85,25 +89,36 @@ export const Main = () => {
 
       <section className={styles.container}>
         <section>
-          <h2 className={styles.subtitle}>Recently Used</h2>
+          <header className={styles.header}>
+            <h2 className={styles.subtitle}>Recently Used</h2>
+            <div className={styles.options}>
+              <RiLayoutGridLine className={styles.option} />
+              <RiLayoutRowLine className={styles.option} />
+            </div>
+          </header>
           <div className={styles.recentProjects}>
-            {recentProjects.map((project) => (
-              <Project data={project} />
+            {recentProjects.map((project, index) => (
+              <Project data={project} key={index} />
             ))}
           </div>
         </section>
 
         <section>
-          <h2 className={styles.subtitle}>Recent Files</h2>
+          <header className={styles.header}>
+            <h2 className={styles.recentSubtitle}>Recent Files</h2>
+            <button className={styles.viewAll}>View All</button>
+          </header>
           <FileList files={recentFiles} />
         </section>
 
         <section>
-          <h2 className={styles.subtitle}>Shared with me</h2>
-
+          <header className={styles.header}>
+            <h2 className={styles.sharedSubtitle}>Share with me</h2>
+            <button className={styles.viewAll}>View All</button>
+          </header>
           <div className={styles.sharedProjects}>
-            {sharedProjects.map((shared) => (
-              <Shared data={shared} />
+            {sharedProjects.map((shared, index) => (
+              <Shared data={shared} key={index} />
             ))}
           </div>
         </section>

@@ -1,24 +1,13 @@
-import { RemixiconComponentType } from "@remixicon/react";
+import { Option } from "../../../shared/types/entities";
 import styles from "./modal.module.scss";
-import { Option } from "../types";
 
 type ModalProps = {
   options: Option[];
-  handleMouseEnter: () => void;
-  handleMouseLeave: () => void;
 };
 
-export const Modal: React.FC<ModalProps> = ({
-  options,
-  handleMouseEnter,
-  handleMouseLeave,
-}) => {
+export const Modal: React.FC<ModalProps> = ({ options }) => {
   return (
-    <div
-      className={styles.container}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className={styles.container}>
       <ul className={styles.options}>
         {options.map((option) => (
           <li className={styles.option} key={option.label}>

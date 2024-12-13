@@ -1,0 +1,50 @@
+@use "/src/shared/styles/colors";
+
+.title {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+.container {
+  /* top | right | bottom | left */
+  padding: 1rem 28px 0px 30px;
+}
+
+.storageChart {
+  margin-bottom: 16px;
+}
+
+.summary {
+  font-size: 8px;
+  color: colors.$gray-200;
+  letter-spacing: 0.6px;
+  word-spacing: -1px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: -6px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    background-color: colors.$blue-300;
+  }
+  .title {
+    color: colors.$blue-100;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  .container {
+    padding: 1rem;
+  }
+
+  .storageChart {
+    margin-bottom: 1rem;
+  }
+
+  .summary {
+    color: colors.$gray-150;
+    font-size: 1rem;
+  }
+}

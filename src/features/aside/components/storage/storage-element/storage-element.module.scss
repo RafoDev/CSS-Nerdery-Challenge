@@ -1,0 +1,100 @@
+@use "/src/shared/styles/colors";
+
+.container {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  border-bottom: 1px solid colors.$gray-5;
+  column-gap: 7px;
+  padding: 10px 0 7px;
+}
+
+.container:last-child {
+  border: 0;
+}
+
+.type {
+  width: 28px;
+  height: 28px;
+  background-color: colors.$gray-50;
+  border-radius: 8px;
+  grid-row: span 2;
+  place-self: center center;
+}
+.design {
+  background-color: colors.$orange-300;
+}
+.gallery {
+  background-color: colors.$green;
+}
+.document {
+  background-color: colors.$red-100;
+}
+.other {
+  background-color: colors.$orange-300;
+}
+.more {
+  color: colors.$gray-50;
+  height: 15px;
+}
+.name {
+  align-self: end;
+  font-size: 10px;
+}
+.name,
+.gb {
+  color: colors.$blue-300;
+}
+.numberOfFiles {
+  font-size: 8px;
+  color: colors.$gray-200;
+}
+.gb {
+  font-size: 8px;
+  font-weight: 500;
+}
+
+.gbContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 54px;
+  height: 21px;
+  background-color: #fff;
+  border-radius: 4px;
+  grid-row: span 2;
+  place-self: center center;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: min-content 1fr 150px;
+    border-bottom: 1px solid colors.$gray-5;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .type {
+    width: 35px;
+    height: 35px;
+  }
+
+  .name {
+    color: colors.$blue-100;
+    font-size: 1rem;
+  }
+  .numberOfFiles {
+    font-size: 0.8rem;
+    color: colors.$gray-200;
+  }
+  .gb {
+    font-size: 1rem;
+  }
+
+  .gbContainer {
+    width: 100%;
+    padding: 1rem;
+  }
+}
