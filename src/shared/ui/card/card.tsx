@@ -1,5 +1,4 @@
 import { RiMore2Fill } from "@remixicon/react";
-// import styles from "./card.module.scss";
 
 type elementType = "design" | "gallery" | "document" | "folder";
 
@@ -22,13 +21,8 @@ export type CardProps = {
 
 const maxMembers = 3;
 
-export const Card: React.FC<CardProps> = ({
-  data,
-  styles,
-  list = false,
-  more = false,
-}) => {
-  const { type, name, members, creationDate, lastModified } = data;
+export const Card: React.FC<CardProps> = ({ data, styles, more = false }) => {
+  const { name, members, creationDate } = data;
 
   const truncateMembers = () => {
     if (members.length > maxMembers) {

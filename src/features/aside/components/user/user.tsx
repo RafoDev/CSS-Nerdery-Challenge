@@ -1,6 +1,6 @@
 import { RiNotification3Line, RiSettings5Line } from "@remixicon/react";
 import styles from "./user.module.scss";
-import { UserType } from "../../types";
+import { User as UserType } from "../../../../shared/types/entities";
 
 type UserProps = {
   data: UserType;
